@@ -1,0 +1,10 @@
+Place your resume PDF in this folder with the exact filename:
+
+  Praveen_Kumar_Murugaiah_Resume.pdf
+
+The "Download Resume" button on the site links to:
+  ./resume/Praveen_Kumar_Murugaiah_Resume.pdf
+
+Once you add the real file here (and remove this note if you like),
+the download button on the Resume section will work immediately —
+no code changes required.
