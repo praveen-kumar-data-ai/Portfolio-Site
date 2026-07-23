@@ -144,3 +144,41 @@ function typeLoop() {
   setTimeout(typeLoop, deleting ? 35 : 55);
 }
 typeLoop();
+
+// ---------- Contact form (Web3Forms) ----------
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitBtn = contactForm.querySelector('.contact-submit');
+    const formData = new FormData(contactForm);
+
+    formStatus.textContent = 'Sending…';
+    formStatus.className = 'form-status';
+    if (submitBtn) submitBtn.disabled = true;
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: formData,
+      });
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        formStatus.textContent = 'Thanks! Your message has been sent — I\'ll get back to you soon.';
+        formStatus.className = 'form-status success';
+        contactForm.reset();
+      } else {
+        formStatus.textContent = 'Something went wrong. Please try again or email me directly.';
+        formStatus.className = 'form-status error';
+      }
+    } catch (err) {
+      formStatus.textContent = 'Network error. Please try again or email me directly.';
+      formStatus.className = 'form-status error';
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
+    }
+  });
+}

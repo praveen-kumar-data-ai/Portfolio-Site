@@ -727,17 +727,25 @@ img { max-width: 100%; display: block; }
 .resume-card-text p { margin: 0; font-size: 0.88rem; }
 
 /* ---------- Contact ---------- */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: stretch;
+  max-width: 1080px;
+  margin: 0 auto;
+}
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  max-width: 900px;
-  margin: 0 auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 14px;
 }
 .contact-card {
   display: flex;
   align-items: center;
   gap: 14px;
+  height: 100%;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -752,6 +760,55 @@ img { max-width: 100%; display: block; }
 .contact-card svg { color: var(--accent); flex-shrink: 0; }
 .contact-card-static { cursor: default; }
 .contact-card-static:hover { transform: none; }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  box-shadow: var(--shadow);
+}
+.form-honeypot { display: none; }
+.form-field { display: flex; flex-direction: column; gap: 6px; }
+.form-field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+.form-field input,
+.form-field textarea {
+  font-family: inherit;
+  font-size: 0.92rem;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: #1e293b;
+  resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.15);
+}
+.contact-submit {
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+}
+.form-status {
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 600;
+  min-height: 1.2em;
+}
+.form-status.success { color: #16a34a; }
+.form-status.error { color: #dc2626; }
 
 /* ---------- Footer ---------- */
 .site-footer {
@@ -816,7 +873,6 @@ img { max-width: 100%; display: block; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
   .cert-grid { grid-template-columns: repeat(2, 1fr); }
-  .contact-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 720px) {
@@ -843,6 +899,7 @@ img { max-width: 100%; display: block; }
   .strengths-grid, .skills-grid, .projects-grid, .cert-grid, .contact-grid, .outside-grid, .edu-grid {
     grid-template-columns: 1fr;
   }
+  .contact-layout { grid-template-columns: 1fr; }
   .featured-project { padding: 26px; }
   .resume-card { flex-direction: column; text-align: center; }
   .timeline-toggle { padding: 18px; }
