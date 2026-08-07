@@ -5,13 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Praveen Kumar Murugaiah | Senior Data Engineer</title>
   <meta name="description" content="Praveen Kumar Murugaiah — Senior Data Engineer specializing in Apache Spark, Databricks, Azure, AWS, PySpark, SQL, CI/CD, Docker & Kubernetes." />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="robots" content="index, follow" />
+  <!-- TODO: set the real deployed domain once live, then uncomment/update og:url and twitter:url -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Praveen Kumar Murugaiah | Senior Data Engineer" />
+  <meta property="og:description" content="Senior Data Engineer specializing in Apache Spark, Databricks, Azure, AWS, PySpark, SQL, CI/CD, Docker & Kubernetes." />
+  <meta property="og:image" content="./images/profile.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Praveen Kumar Murugaiah | Senior Data Engineer" />
+  <meta name="twitter:description" content="Senior Data Engineer specializing in Apache Spark, Databricks, Azure, AWS, PySpark, SQL, CI/CD, Docker & Kubernetes." />
+  <meta name="twitter:image" content="./images/profile.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Praveen Kumar Murugaiah",
+    "jobTitle": "Senior Data Engineer",
+    "address": { "@type": "PostalAddress", "addressLocality": "Chicago", "addressRegion": "IL", "addressCountry": "US" },
+    "email": "mailto:paarveen00@gmail.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/praveen-kumar-murugaiah-843415107/",
+      "https://github.com/praveen-kumar-data-ai",
+      "https://leetcode.com/u/leetcode_uiuc/"
+    ]
+  }
+  </script>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f172a'/%3E%3Ctext x='50' y='66' font-size='52' font-family='Arial' font-weight='bold' fill='%2322d3ee' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <a href="#home" class="skip-link">Skip to main content</a>
   <div id="scroll-progress"></div>
+
 
   <header class="navbar" id="navbar">
     <div class="nav-inner container">
@@ -27,7 +55,7 @@
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
       <a href="#contact" class="btn btn-sm btn-accent nav-cta">Let's Chat</a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -49,10 +77,10 @@
             I build <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
           </p>
           <p class="hero-sub">
-            6+ years architecting distributed data &amp; ML infrastructure while <strong>leading engineering teams</strong>,
+            6+ years architecting distributed data &amp; ML infrastructure while leading engineering teams,
             mentoring talent, and aligning senior leadership around a unified data vision for the org &mdash; on
-            <strong>Spark, Databricks, Kafka &amp; Delta Lake</strong>. Delivered <strong>$1M+</strong> in measurable
-            infrastructure savings and cut pipeline latency up to <strong>63%</strong> for Fortune 500 and enterprise
+            Spark, Databricks, Kafka &amp; Delta Lake. Delivered <strong>$1M+</strong> in measurable
+            infrastructure savings and cut pipeline latency up to 63% for Fortune 500 and enterprise
             clients across the US.
           </p>
           <div class="hero-actions">
@@ -294,7 +322,7 @@
             </button>
             <div class="timeline-body">
               <ul>
-                <li>Designed and deployed high-throughput data layers via Databricks using PySpark &amp; Spark SQL, resulting in <strong>22% faster</strong> data processing and <strong>38% faster</strong> ML model deployment.</li>
+                <li>Designed and deployed high-throughput data layers via Databricks using PySpark &amp; Spark SQL, resulting in 22% faster data processing and <strong>38% faster</strong> ML model deployment.</li>
                 <li>Led a 3-engineer team to architect an <strong>LLM-powered Spark optimization agent</strong> that parses job code, driver logs, and Spark metrics to generate actionable code- and AWS cluster-tuning recommendations.</li>
                 <li>Shipped the agent as a client-facing product recognized with a company innovation award; deployed across enterprise accounts managing 500GB+ pipelines using CI/CD, cutting customer infrastructure costs by <strong>23%</strong>.</li>
               </ul>
@@ -316,7 +344,7 @@
               <ul>
                 <li>Led a 2-engineer team migrating on-prem Oracle payroll systems to a <strong>Medallion architecture</strong> on Delta Lake, improving distributed processing performance <strong>90%</strong> for 1.6M+ client records using Databricks and Azure Data Factory.</li>
                 <li>Designed and deployed cloud ETL pipelines against banking/NBFI client SLAs to support real estate and insurance decisioning, driving <strong>30% ROI</strong> within 3 months of launch.</li>
-                <li>Built a sub-3-second streaming fraud-detection pipeline using time-windowed aggregation, watermarking, and late-data handling on Databricks, improving detection response time <strong>80%</strong> and reducing false positives <strong>40%</strong>.</li>
+                <li>Built a sub-3-second streaming fraud-detection pipeline using time-windowed aggregation, watermarking, and late-data handling on Databricks, improving detection response time <strong>80%</strong> and reducing false positives 40%.</li>
               </ul>
             </div>
           </article>
@@ -334,9 +362,9 @@
             </button>
             <div class="timeline-body">
               <ul>
-                <li>Architected partitioned, incremental batch/streaming pipelines with Databricks, Kafka, and Spark SQL processing <strong>12M+ daily</strong> finance records across 40+ sources, improving fault tolerance <strong>15%</strong>.</li>
-                <li>Eliminated the small-file problem via Delta Lake OPTIMIZE and Z-ORDER indexing, raising pipeline reliability from 80% to <strong>91%</strong> and query performance <strong>35%</strong>.</li>
-                <li>Led end-to-end ML pipeline design with real-time feature engineering for predictive models, achieving a <strong>77% F1 score</strong> and cutting false alerts <strong>12%</strong> through statistical validation.</li>
+                <li>Architected partitioned, incremental batch/streaming pipelines with Databricks, Kafka, and Spark SQL processing <strong>12M+ daily</strong> finance records across 40+ sources, improving fault tolerance 15%.</li>
+                <li>Eliminated the small-file problem via Delta Lake OPTIMIZE and Z-ORDER indexing, raising pipeline reliability from 80% to <strong>91%</strong> and query performance 35%.</li>
+                <li>Led end-to-end ML pipeline design with real-time feature engineering for predictive models, achieving a <strong>77% F1 score</strong> and cutting false alerts 12% through statistical validation.</li>
               </ul>
             </div>
           </article>
@@ -469,25 +497,25 @@
         <h2 class="section-title reveal">Certifications</h2>
         <div class="cert-grid reveal">
           <a class="cert-card" href="https://credentials.databricks.com/0451cfcc-240e-4d78-9bfa-878cac414112" target="_blank" rel="noopener noreferrer">
-            <div class="cert-icon"><img src="https://cdn.simpleicons.org/databricks/FF3621" alt="Databricks" loading="lazy" /></div>
+            <div class="cert-icon"><img src="https://cdn.simpleicons.org/databricks/FF3621" alt="Databricks" loading="lazy" width="40" height="40" /></div>
             <h4>Databricks Certified Data Engineer Professional</h4>
             <p>Advanced Spark, Delta Lake &amp; production pipeline design on the Databricks Lakehouse Platform.</p>
             <span class="cert-link">View credential ↗</span>
           </a>
           <a class="cert-card" href="https://credentials.databricks.com/077130fe-647b-4f4e-bdf8-2486191685b7#acc.bfCJAu8t" target="_blank" rel="noopener noreferrer">
-            <div class="cert-icon"><img src="https://cdn.simpleicons.org/databricks/FF3621" alt="Databricks" loading="lazy" /></div>
+            <div class="cert-icon"><img src="https://cdn.simpleicons.org/databricks/FF3621" alt="Databricks" loading="lazy" width="40" height="40" /></div>
             <h4>Databricks Certified Machine Learning Professional</h4>
             <p>Advanced ML pipeline design, model management &amp; deployment on Databricks.</p>
             <span class="cert-link">View credential ↗</span>
           </a>
           <a class="cert-card" href="https://www.anthropic.com/" target="_blank" rel="noopener noreferrer">
-            <div class="cert-icon"><img src="https://cdn.simpleicons.org/claude/D97757" alt="Claude AI" loading="lazy" /></div>
+            <div class="cert-icon"><img src="https://cdn.simpleicons.org/claude/D97757" alt="Claude AI" loading="lazy" width="40" height="40" /></div>
             <h4>Claude AI Certified</h4>
             <p>Certified in applying Claude / GenAI &amp; LLM agent development to real-world engineering workflows.</p>
             <span class="cert-link">View credential ↗</span>
           </a>
           <a class="cert-card cert-progress" href="https://aws.amazon.com/certification/certified-solutions-architect-associate/" target="_blank" rel="noopener noreferrer">
-            <div class="cert-icon"><img src="https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png" alt="AWS Certified Solutions Architect badge" loading="lazy" /></div>
+            <div class="cert-icon"><img src="https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png" alt="AWS Certified Solutions Architect badge" loading="lazy" width="40" height="40" /></div>
             <h4>AWS Certified Solutions Architect</h4>
             <p>Cloud architecture best practices across compute, storage, networking &amp; security on AWS.</p>
             <span class="cert-link">In Progress ↗</span>

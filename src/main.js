@@ -38,8 +38,9 @@ updateNavbarState();
 // ---------- Mobile hamburger menu ----------
 const hamburger = document.getElementById('hamburger');
 hamburger.addEventListener('click', () => {
-  navbar.classList.toggle('menu-open');
-  hamburger.classList.toggle('open');
+  const isOpen = navbar.classList.toggle('menu-open');
+  hamburger.classList.toggle('open', isOpen);
+  hamburger.setAttribute('aria-expanded', String(isOpen));
 });
 
 // Close mobile menu when a link is clicked
@@ -47,6 +48,7 @@ document.querySelectorAll('.nav-link').forEach((link) => {
   link.addEventListener('click', () => {
     navbar.classList.remove('menu-open');
     hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
   });
 });
 
@@ -60,7 +62,10 @@ const navObserver = new IntersectionObserver(
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute('id');
         navLinks.forEach((link) => {
-          link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+          const isActive = link.getAttribute('href') === `#${id}`;
+          link.classList.toggle('active', isActive);
+          if (isActive) link.setAttribute('aria-current', 'page');
+          else link.removeAttribute('aria-current');
         });
       }
     });
